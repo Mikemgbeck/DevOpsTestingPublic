@@ -1,0 +1,10 @@
+@DevOpsTesting_HostAddress = http://localhost:44301
+
+
+
+GET {{DevOpsTesting_HostAddress}}/User/
+Accept: application/json
+
+###
+GET {{DevOpsTesting_HostAddress}}/User/1
+Accept: application/json
