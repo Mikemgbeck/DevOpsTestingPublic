@@ -19,7 +19,7 @@ namespace DevOpsTesting.Tests.Controller
         {
             _user = A.Fake<IUser>();
         }
-        private DataContext GetDatabaseContext()
+        private static DataContext GetDatabaseContext()
         {
             var options = new DbContextOptionsBuilder<DataContext>()
                 .UseInMemoryDatabase(databaseName: Guid.NewGuid().ToString())

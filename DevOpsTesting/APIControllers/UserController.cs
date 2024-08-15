@@ -48,7 +48,7 @@ namespace DevOpsTesting.APIControllers
             return Ok();
         }
 
-        [HttpPut("{id}")]
+        [HttpPut]
         public async Task<ActionResult> UpdateUser(User updatedUser)
         {
             var dbUser = await _context.User.FindAsync(updatedUser.Id);
