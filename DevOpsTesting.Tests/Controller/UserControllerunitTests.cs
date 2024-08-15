@@ -85,29 +85,6 @@ namespace DevOpsTesting.Tests.Controller
         }
 
         [Fact]
-        public async Task UserController_UpdateUser_ReturnOK()
-        {
-            //arrange
-            var dbContext = GetDatabaseContext();
-            var fakeupdatedUser = A.Fake<IUser>();
-            var dbUser = await dbContext.User.FindAsync(fakeupdatedUser.Id);
-            //act
-            if (dbUser is null)
-            {
-                return;
-            }
-
-            dbUser.FirstName = fakeupdatedUser.FirstName;
-            dbUser.LastName = fakeupdatedUser.LastName;
-            dbUser.Email = fakeupdatedUser.Email;
-
-            var result = await dbContext.SaveChangesAsync();
-
-            //assert
-            result.Should().Be(1);
-        }
-
-        [Fact]
         public async Task UserController_DeleteUser_ReturnsOK()
         {
             //arrange

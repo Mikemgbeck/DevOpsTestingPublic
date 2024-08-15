@@ -22,8 +22,8 @@ namespace DevOpsTesting.APIControllers
         [HttpGet]
         public async Task<ActionResult<List<User>>> GetAllUsers()
         {
-            //var users = await _context.User.ToListAsync();
-           // return Ok(users);
+            var users = await _context.User.ToListAsync();
+            return Ok(users);
         }
 
         [HttpGet("{id}")]
@@ -64,8 +64,6 @@ namespace DevOpsTesting.APIControllers
             await _context.SaveChangesAsync();
 
             return Ok();
-
-
         }
 
         [HttpDelete("{id}")]
