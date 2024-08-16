@@ -1,7 +1,6 @@
 import axios from "axios";
 import { UserDto } from "../models/userDto";
 import { API_BASE_URL } from "../config";
-import { GetUserByIdResponse } from "../models/getUserbyIDResponse";
 
 axios.defaults.headers.post['Content-Type'] ='application/json;charset=utf-8';
 axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
@@ -33,7 +32,7 @@ const apiConnector = {
   },
 
   editUser: async (user: UserDto): Promise<void> => {
-    await axios.put<number>(`/user/${user.id}`, user);
+    await axios.put<number>(API_BASE_URL +`/user/`, user);
     
     // await fetch(API_BASE_URL + "/User", { 
     //     method: "PUT",

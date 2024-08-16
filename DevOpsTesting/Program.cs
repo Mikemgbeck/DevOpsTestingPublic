@@ -20,7 +20,7 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy("CorsPolicy", policyBuilder =>
     {
-        policyBuilder.AllowAnyHeader().WithOrigins("http://localhost:5173").WithMethods("GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS");
+        policyBuilder.AllowAnyHeader().WithOrigins("http://localhost:5174").WithMethods("GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS");
     });
 });
 

@@ -14,7 +14,7 @@ export default function userTableItem({user}: Props){
                 <td data-label="Id">{user.id}</td>
                 <td data-label="First Name">{user.firstName}</td>
                 <td data-label="Last Name">{user.lastName}</td>
-                <td data-label="Email">{user.id}</td>
+                <td data-label="Email">{user.email}</td>
                 <td data-label="Action">
                     <Button as={NavLink} to={'editUser/'+ user.id} color="yellow" type="submit">
                         Edit
